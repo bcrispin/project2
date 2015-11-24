@@ -14,6 +14,12 @@ private:
     std::string lineNumber;
 
 public:
+    bool operator>(const phoneNumberType&);
+    bool operator>=(const phoneNumberType&);
+    bool operator<=(const phoneNumberType&);
+    bool operator<(const phoneNumberType&);
+    bool operator==(const phoneNumberType&);
+    
     void print();
 
     void setPhoneNumber(std::string number);
@@ -21,7 +27,7 @@ public:
 
     bool validatePhoneNumber(std::string phoneNumber);
 
-    std::string getPhoneNumber();
+    std::string getPhoneNumber() const;
 
     phoneNumberType(std::string number = "0000000000");
 };

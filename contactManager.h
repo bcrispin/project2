@@ -15,7 +15,10 @@ private:
     extPersonList contactList;
 public:
     extPersonType findPerson();
-    extPersonList sortListByProperty();
+    extPersonList sortListByDate();
+    extPersonList sortListByAddress();
+    extPersonList sortListByPhone();
+    extPersonList sortListByName();
 
 };
 

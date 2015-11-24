@@ -30,3 +30,31 @@ void dateType::printDate() const {
 dateType::dateType(int month, int day, int year) {
     dateType::setDate(month ,day ,year);
 }
+
+bool dateType::operator>(const dateType &rDate) {
+    return dateType::dYear > rDate.getYear() ||
+            (dateType::dYear == rDate.getYear() && dateType::dMonth > rDate.getMonth()) ||
+            (dateType::dYear == rDate.getYear() && dateType::dMonth == rDate.getMonth() && dateType::dDay > rDate.getDay());
+}
+
+bool dateType::operator>=(const dateType &rDate) {
+    return dateType::dYear >= rDate.getYear() ||
+           (dateType::dYear == rDate.getYear() && dateType::dMonth >= rDate.getMonth()) ||
+           (dateType::dYear == rDate.getYear() && dateType::dMonth == rDate.getMonth() && dateType::dDay >= rDate.getDay());
+}
+
+bool dateType::operator<=(const dateType &rDate) {
+    return dateType::dYear > rDate.getYear() ||
+           (dateType::dYear == rDate.getYear() && dateType::dMonth > rDate.getMonth()) ||
+           (dateType::dYear == rDate.getYear() && dateType::dMonth == rDate.getMonth() && dateType::dDay > rDate.getDay());
+}
+
+bool dateType::operator<(const dateType &rDate) {
+    return dateType::dYear < rDate.getYear() ||
+           (dateType::dYear == rDate.getYear() && dateType::dMonth < rDate.getMonth()) ||
+           (dateType::dYear == rDate.getYear() && dateType::dMonth == rDate.getMonth() && dateType::dDay < rDate.getDay());
+}
+
+bool dateType::operator==(const dateType &rDate) {
+    return dateType::dYear == rDate.getYear() && dateType::dMonth == rDate.getMonth() && dateType::dDay == rDate.getDay();
+}

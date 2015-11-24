@@ -18,6 +18,13 @@ private:
 
 public:
 
+    bool operator>(const addressType&);
+    bool operator>=(const addressType&);
+    bool operator<=(const addressType&);
+    bool operator<(const addressType&);
+    bool operator==(const addressType&);
+
+
     void print();
     //Function to output the address of the user.
 
@@ -27,11 +34,12 @@ public:
     //according to the parameters.
     //Postcondition: dMonth = month; dDay = day; dYear = year
 
-    const std::string getStreetName();
-    const int getStreetNumber();
-    const std::string getCity();
-    const std::string getState();
-    const int getZip();
+    const std::string getStreetName() const;
+    const int getStreetNumber() const;
+    const std::string getCity() const;
+    const std::string getState() const;
+    const int getZip() const;
+
 
     addressType(int = 0, std::string = "", std::string = "", std::string = "", int = 0);
 };

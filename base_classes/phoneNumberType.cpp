@@ -42,10 +42,29 @@ bool phoneNumberType::validatePhoneNumber(std::string phoneNumber) {
     return true;
 }
 
-std::string phoneNumberType::getPhoneNumber() {
+std::string phoneNumberType::getPhoneNumber() const{
     return areaCode + prefix + lineNumber;
 }
 
 phoneNumberType::phoneNumberType(std::string number) {
     setPhoneNumber(number);
+}
+
+bool phoneNumberType::operator>(const phoneNumberType &rPhoneNumber) {
+    return phoneNumberType::getPhoneNumber() > rPhoneNumber.getPhoneNumber();
+}
+
+bool phoneNumberType::operator>=(const phoneNumberType &rPhoneNumber) {
+    return phoneNumberType::getPhoneNumber() >= rPhoneNumber.getPhoneNumber();
+}
+
+bool phoneNumberType::operator<=(const phoneNumberType &rPhoneNumber) {
+    return phoneNumberType::getPhoneNumber() <= rPhoneNumber.getPhoneNumber();}
+
+bool phoneNumberType::operator<(const phoneNumberType &rPhoneNumber) {
+    return phoneNumberType::getPhoneNumber() < rPhoneNumber.getPhoneNumber();
+}
+
+bool phoneNumberType::operator==(const phoneNumberType &rPhoneNumber) {
+    return phoneNumberType::getPhoneNumber() == rPhoneNumber.getPhoneNumber();
 }

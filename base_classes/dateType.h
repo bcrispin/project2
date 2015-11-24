@@ -11,6 +11,14 @@
 class dateType
 {
 public:
+
+    bool operator>(const dateType&);
+    bool operator>=(const dateType&);
+    bool operator<=(const dateType&);
+    bool operator<(const dateType&);
+    bool operator==(const dateType&);
+
+
     void setDate(int month, int day, int year);
     //Function to set the date.
     //The member variables dMonth, dDay, and dYear are set
