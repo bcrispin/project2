@@ -3,6 +3,7 @@
 //
 
 #include "searchAndSort.h"
+#include <vector>
 
 template <class T>
 int searchAndSort::binarySearch(T *searchArr, int length, T searchObject) {
@@ -25,7 +26,7 @@ int searchAndSort::binarySearch(T *searchArr, int length, T searchObject) {
 }
 
 template <class T>
-void searchAndSort::quickSort(T *sortArr, int left, int right) {
+void searchAndSort::quickSort(std::vector sortArr, int left, int right) {
     int i = left, j = right;
     T temp;
     T pivot = sortArr[(left + right) / 2];

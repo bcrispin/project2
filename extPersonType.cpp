@@ -78,3 +78,12 @@ std::string extPersonType::getRelationshipString() const {
             return "NONE";
     }
 }
+
+extPersonType::extPersonType(const extPersonType &person)
+{
+    extPersonType::address = person.getAddress();
+    extPersonType::birthday = person.getBirthday();
+    extPersonType::phoneNumber = person.getPhoneNumber();
+    extPersonType::nextPerson = nullptr;
+    extPersonType::relationship = person.getRelationship();
+}

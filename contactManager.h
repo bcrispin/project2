@@ -5,6 +5,7 @@
 #ifndef PROJECT2_CONTACTMANAGER_H
 #define PROJECT2_CONTACTMANAGER_H
 
+#include <vector>
 #include "extPersonType.h"
 #include "extPersonList.h"
 
@@ -12,13 +13,19 @@
 class contactManager
 {
 private:
-    extPersonList contactList;
+    std::vector<extPersonType> contactList;
+
 public:
-    extPersonType findPerson();
-    extPersonList sortListByDate();
-    extPersonList sortListByAddress();
-    extPersonList sortListByPhone();
-    extPersonList sortListByName();
+    void insertPerson(extPersonType person);
+    void deletePerson(int index);
+    void print();
+    int length();
+
+    int findPerson(std::string LastName);
+    extPersonList sortListByDate(dateType firstDate, dateType lastDate);
+    extPersonList sortListByAddress(addressType firstAddress, addressType lastAddress);
+    extPersonList sortListByPhone(phoneNumberType firstNumber, phoneNumberType lastNumber);
+    extPersonList sortListByName(std::string firstLastName, std::string lastLastName);
 
 };
 

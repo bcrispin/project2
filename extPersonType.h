@@ -29,6 +29,7 @@ public:
                   phoneNumberType number,
                   Relationship relationship);
 
+    extPersonType(const extPersonType &);
 
     void print();
 

@@ -7,13 +7,14 @@
 
 
 #include <array>
+#include <vector>
 
 template <class T>
 class searchAndSort
 {
 public:
     static int binarySearch(T* searchArr, int length, T searchObject);
-    static void quickSort(T *sortArr, int left, int right);
+    static void quickSort(std::__1::vector sortArr, int left, int right);
 
 };
 
